@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Historic Huntsville Magazine - Preserving the stories and heritage of North Alabama since 1989. Explore local history, vintage photos, and Southern traditions.">
+    <meta name="keywords" content="Huntsville history, Alabama heritage, local magazine, historic preservation, Southern culture">
+    <meta name="author" content="Historic Huntsville Magazine">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.com/">
+    <meta property="og:title" content="Historic Huntsville Magazine - Yesterday's News Today">
+    <meta property="og:description" content="Preserving the stories and heritage of North Alabama since 1989">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yoursite.com/">
+    <meta property="twitter:title" content="Historic Huntsville Magazine - Yesterday's News Today">
+    <meta property="twitter:description" content="Preserving the stories and heritage of North Alabama since 1989">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+    
+    <title>Historic Huntsville Magazine - Yesterday's News Today</title>
+    <link rel="stylesheet" href="magazine.css?v=3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>Historic Huntsville</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#articles" class="nav-link">Articles</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#subscribe" class="nav-link">Subscribe</a></li>
+                <li><a href="#store" class="nav-link">Store</a></li>
+                <li><a href="#donate" class="nav-link btn-donate">Donate</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Historic Huntsville Magazine</h1>
+            <p class="hero-subtitle">Yesterday's News Today - Preserving the Stories & Heritage of North Alabama Since 1989</p>
+            <div class="hero-buttons">
+                <a href="#articles" class="btn btn-primary">Read Our Stories</a>
+                <a href="#subscribe" class="btn btn-secondary">Subscribe Now</a>
+            </div>
+            <!-- Demo Banner -->
+            <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.95); border-radius: 15px; border-left: 5px solid #e74c3c; box-shadow: 0 10px 30px rgba(0,0,0,0.2); max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h3 style="color: #2c3e50; margin-bottom: 10px; font-size: 1.3rem;">
+                    <i class="fas fa-pen-fancy" style="color: #f39c12;"></i> Share Your Huntsville Story
+                </h3>
+                <p style="color: #7f8c8d; margin-bottom: 15px; line-height: 1.6;">
+                    We're always looking for stories, photos, and memories from Huntsville's past. Your contribution helps preserve our local heritage.
+                </p>
+                <button onclick="openContactModal()" class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-edit"></i> Submit Your Story
+                </button>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section id="articles" class="articles-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Stories from Huntsville History</h2>
+                <p>Discover our most recent articles and features about North Alabama</p>
+            </div>
+
+            <!-- Featured Article -->
+            <div class="featured-article">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="Historic Downtown Huntsville">
+                    <span class="article-badge">Featured Story</span>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="category">Local History</span>
+                        <span class="date"><i class="far fa-clock"></i> Oct 19, 2025</span>
+                    </div>
+                    <h3>Memories of Old Town: When Main Street Was the Heart of Huntsville</h3>
+                    <p>Step back in time to the 1950s when downtown Huntsville was a bustling hub where everyone knew their neighbors. From the soda fountains at Woolworth's to the Saturday picture shows at the Lyric Theater, these are the stories our parents and grandparents love to tell.</p>
+                    <a href="#" class="read-more" onclick="openArticle('article1')">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Article Grid -->
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1551135049-8a33b5883817?w=400" alt="Monte Sano Mountain">
+                    </div>
+                    <div class="article-body">
+                        <span class="category">Nostalgia</span>
+                        <h4>Growing Up on Monte Sano: Summer Days and Fireflies</h4>
+                        <p>Remember when kids played outside until the streetlights came on? Stories from families who called the mountain home in the golden days of Huntsville...</p>
+                        <a href="#" class="read-more" onclick="openArticle('article2')">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=400" alt="Cotton Mill">
+                    </div>
+                    <div class="article-body">
+                        <span class="category">Industry</span>
+                        <h4>The Cotton Mill Days: Hard Work and Strong Families</h4>
+                        <p>Life in the mill villages of Lincoln, Merrimack, and Dallas. How textile workers built a community that lasted generations...</p>
+                        <a href="#" class="read-more" onclick="openArticle('article3')">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=400" alt="Rocket">
+                    </div>
+                    <div class="article-body">
+                        <span class="category">Space History</span>
+                        <h4>When Werner von Braun Came to Town</h4>
+                        <p>How a team of German rocket scientists transformed sleepy Huntsville into the Rocket City we know today...</p>
+                        <a href="#" class="read-more" onclick="openArticle('article4')">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400" alt="Southern Cooking">
+                    </div>
+                    <div class="article-body">
+                        <span class="category">Recipes</span>
+                        <h4>Grandma's Kitchen: Best-Loved Southern Recipes</h4>
+                        <p>From biscuits and gravy to fried chicken and sweet tea - the recipes that made Sunday dinners special in North Alabama homes...</p>
+                        <a href="#" class="read-more" onclick="openArticle('article5')">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=400" alt="Old Courthouse">
+                    </div>
+                    <div class="article-body">
+                        <span class="category">Local Legends</span>
+                        <h4>Tales from the Courthouse Square</h4>
+                        <p>Saturday gatherings, political rallies, and the characters who made downtown Huntsville come alive in days gone by...</p>
+                        <a href="#" class="read-more" onclick="openArticle('article6')">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=400" alt="Veterans">
+                    </div>
+                    <div class="article-body">
+                        <span class="category">Veterans</span>
+                        <h4>Huntsville's Heroes: Stories from WWII and Korea</h4>
+                        <p>Honoring the brave men and women from Madison County who served their country and the memories they brought home...</p>
+                        <a href="#" class="read-more" onclick="openArticle('article7')">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Historic Photo Gallery</h2>
+                <p>Vintage photographs from Huntsville's rich past</p>
+            </div>
+
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="urban">Urban</button>
+                <button class="filter-btn" data-filter="people">People</button>
+                <button class="filter-btn" data-filter="abstract">Abstract</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="nature">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500" alt="Nature">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="urban">
+                    <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=500" alt="Urban">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="people">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500" alt="People">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="abstract">
+                    <img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=500" alt="Abstract">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="nature">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500" alt="Nature">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="urban">
+                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500" alt="Urban">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="people">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500" alt="People">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="abstract">
+                    <img src="https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?w=500" alt="Abstract">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section id="subscribe" class="subscribe-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Subscribe to Our Magazine</h2>
+                <p>Get exclusive content delivered to your inbox</p>
+            </div>
+
+            <div class="subscription-plans">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Free</h3>
+                        <div class="price">
+                            <span class="amount">$0</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Weekly newsletter</li>
+                        <li><i class="fas fa-check"></i> Access to 5 articles/month</li>
+                        <li><i class="fas fa-check"></i> Community access</li>
+                        <li><i class="fas fa-times"></i> No premium content</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="selectPlan('free')">Get Started</button>
+                </div>
+
+                <div class="plan-card featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Premium</h3>
+                        <div class="price">
+                            <span class="amount">$9.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Daily newsletter</li>
+                        <li><i class="fas fa-check"></i> Unlimited articles</li>
+                        <li><i class="fas fa-check"></i> Exclusive content</li>
+                        <li><i class="fas fa-check"></i> Ad-free experience</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="selectPlan('premium')">Subscribe Now</button>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="amount">$19.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Everything in Premium</li>
+                        <li><i class="fas fa-check"></i> Print magazine delivery</li>
+                        <li><i class="fas fa-check"></i> VIP events access</li>
+                        <li><i class="fas fa-check"></i> Personal concierge</li>
+                        <li><i class="fas fa-check"></i> Archive access</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="selectPlan('professional')">Go Pro</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store" class="store-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Huntsville History Store</h2>
+                <p>Books, magazines, and memorabilia celebrating our heritage</p>
+            </div>
+
+            <div class="store-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400" alt="History Book">
+                        <button class="quick-view">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h4>Historic Huntsville: A Pictorial History</h4>
+                        <p class="product-price">$34.95</p>
+                        <button class="btn btn-small add-to-cart" data-name="Historic Huntsville Book" data-price="34.95">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1517059224940-d4af9eec41b7?w=400" alt="Magazine">
+                        <button class="quick-view">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h4>October 2025 Issue</h4>
+                        <p class="product-price">$8.95</p>
+                        <button class="btn btn-small add-to-cart" data-name="October 2025 Issue" data-price="8.95">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" alt="T-Shirt">
+                        <button class="quick-view">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h4>"Rocket City" Heritage T-Shirt</h4>
+                        <p class="product-price">$24.95</p>
+                        <button class="btn btn-small add-to-cart" data-name="Rocket City T-Shirt" data-price="24.95">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1584308972272-9e4e7685e80f?w=400" alt="Vintage Map">
+                        <button class="quick-view">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h4>Vintage Huntsville Map Print</h4>
+                        <p class="product-price">$29.95</p>
+                        <button class="btn btn-small add-to-cart" data-name="Vintage Map Print" data-price="29.95">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1585399000684-d2f72660f092?w=400" alt="Tote Bag">
+                        <button class="quick-view">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h4>"Old Town" Canvas Tote</h4>
+                        <p class="product-price">$18.95</p>
+                        <button class="btn btn-small add-to-cart" data-name="Old Town Tote" data-price="18.95">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400" alt="Recipe Book">
+                        <button class="quick-view">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h4>Classic Southern Recipes Collection</h4>
+                        <p class="product-price">$22.95</p>
+                        <button class="btn btn-small add-to-cart" data-name="Recipe Collection" data-price="22.95">Add to Cart</button>
+                    </div>
+                </div>
+
+                        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=400" alt="Mug">
+                        <button class="quick-view" onclick="addToCart('Coffee Mug', 16.99)">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h4>Coffee Mug</h4>
+                        <p class="product-price">$16.99</p>
+                        <button class="btn btn-small" onclick="addToCart('Coffee Mug', 16.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="donate-section">
+        <div class="container">
+            <div class="donate-content">
+                <div class="donate-text">
+                    <h2>Help Preserve Huntsville History</h2>
+                    <p>Your generous donations help us continue documenting and sharing the rich stories of Huntsville and North Alabama for future generations.</p>
+                    <div class="donation-impact">
+                        <div class="impact-item">
+                            <i class="fas fa-book"></i>
+                            <p>Preserving local history for 35+ years</p>
+                        </div>
+                        <div class="impact-item">
+                            <i class="fas fa-users"></i>
+                            <p>Connecting thousands of families' stories</p>
+                        </div>
+                        <div class="impact-item">
+                            <i class="fas fa-heart"></i>
+                            <p>Community-supported journalism</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="donate-form">
+                    <h3>Make a Donation</h3>
+                    <div class="donation-amounts">
+                        <button class="amount-btn" onclick="selectAmount(10)">$10</button>
+                        <button class="amount-btn" onclick="selectAmount(25)">$25</button>
+                        <button class="amount-btn active" onclick="selectAmount(50)">$50</button>
+                        <button class="amount-btn" onclick="selectAmount(100)">$100</button>
+                        <input type="number" placeholder="Custom amount" class="custom-amount" id="custom-amount">
+                    </div>
+                    <form id="donation-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="text" placeholder="Full Name" required>
+                        <button type="submit" class="btn btn-primary btn-block">Donate Now</button>
+                    </form>
+                    <p class="secure-text"><i class="fas fa-lock"></i> Secure payment processing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Historic Huntsville Magazine</h3>
+                    <p>Preserving and sharing the rich history and heritage of Huntsville and North Alabama since 1989. Every story matters, every memory counts.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#articles">Articles</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#subscribe">Subscribe</a></li>
+                        <li><a href="#store">Store</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest stories</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Historic Huntsville Magazine. Celebrating 35+ Years of Preserving Local History.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2><i class="fas fa-shopping-cart"></i> Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3>Total: $<span id="cart-total">0.00</span></h3>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+        <div class="lightbox-nav">
+            <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeContactModal()">&times;</span>
+            <h2><i class="fas fa-pen-fancy"></i> Submit Your Story</h2>
+            <p style="text-align: center; color: #7f8c8d; margin-bottom: 20px;">
+                Have a story about Huntsville's history? We'd love to hear from you! Share your memories, photos, or research.
+            </p>
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="contact-name"><i class="fas fa-user"></i> Name</label>
+                    <input type="text" id="contact-name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="contact-email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="contact-email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone"><i class="fas fa-phone"></i> Phone (Optional)</label>
+                    <input type="tel" id="contact-phone" placeholder="(555) 123-4567">
+                </div>
+                <div class="form-group">
+                    <label for="contact-message"><i class="fas fa-comment"></i> Your Story or Message</label>
+                    <textarea id="contact-message" rows="4" required placeholder="Tell us about your Huntsville memories, historical photos, or research..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-paper-plane"></i> Submit Story
+                </button>
+            </form>
+            <div id="contact-success" style="display: none; text-align: center; color: #27ae60; margin-top: 20px;">
+                <i class="fas fa-check-circle" style="font-size: 3rem;"></i>
+                <p style="font-size: 1.2rem; margin-top: 10px;">Thank you for sharing! We'll review your submission soon.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Contact Button -->
+    <button class="floating-contact" id="floating-contact" onclick="openContactModal()">
+        <i class="fas fa-pen-fancy"></i>
+        <span class="contact-label">Share Your Story</span>
+    </button>
+
+    <!-- Floating Cart Button -->
+    <button class="floating-cart" id="floating-cart" onclick="openCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cart-count">0</span>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="magazine.js"></script>
+</body>
+</html>

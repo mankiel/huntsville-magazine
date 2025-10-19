@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Preview - Historic Huntsville Magazine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .devices {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .device {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .device:hover {
+            transform: translateY(-5px);
+        }
+
+        .device-header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .device-header h2 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .device-header p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .device-frame {
+            background: #1a1a1a;
+            border-radius: 30px;
+            padding: 15px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .phone-frame {
+            max-width: 375px;
+            margin: 0 auto;
+        }
+
+        .tablet-frame {
+            max-width: 768px;
+            margin: 0 auto;
+        }
+
+        .desktop-frame {
+            width: 100%;
+        }
+
+        .screen {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255,255,255,0.1);
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+            display: block;
+        }
+
+        .phone-frame iframe {
+            height: 667px;
+        }
+
+        .tablet-frame iframe {
+            height: 600px;
+        }
+
+        .desktop-frame iframe {
+            height: 500px;
+        }
+
+        .features {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .features h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        .breakpoint-info {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .breakpoint-info h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .breakpoint-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .breakpoint-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .breakpoint-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .btn-test {
+            display: block;
+            text-align: center;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 30px auto 0;
+            max-width: 300px;
+            transition: all 0.3s;
+        }
+
+        .btn-test:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .devices {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-mobile-alt"></i> Mobile Device Preview</h1>
+
+        <div class="devices">
+            <!-- Phone -->
+            <div class="device">
+                <div class="device-header">
+                    <h2><i class="fas fa-mobile-alt"></i> iPhone</h2>
+                    <p>375px × 667px</p>
+                </div>
+                <div class="device-frame phone-frame">
+                    <div class="screen">
+                        <iframe src="magazine.html"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tablet -->
+            <div class="device">
+                <div class="device-header">
+                    <h2><i class="fas fa-tablet-alt"></i> iPad</h2>
+                    <p>768px × 1024px</p>
+                </div>
+                <div class="device-frame tablet-frame">
+                    <div class="screen">
+                        <iframe src="magazine.html"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop -->
+            <div class="device">
+                <div class="device-header">
+                    <h2><i class="fas fa-desktop"></i> Desktop</h2>
+                    <p>1200px+ width</p>
+                </div>
+                <div class="device-frame desktop-frame">
+                    <div class="screen">
+                        <iframe src="magazine.html"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2><i class="fas fa-magic"></i> Responsive Features</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bars"></i>
+                    <h3>Hamburger Menu</h3>
+                    <p>On mobile devices, the navigation collapses into a hamburger menu for easy access and clean design.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Stacked Layout</h3>
+                    <p>Multi-column layouts automatically stack into single columns for better mobile readability.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-text-height"></i>
+                    <h3>Adaptive Typography</h3>
+                    <p>Font sizes scale appropriately across devices ensuring text is always readable.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-hand-pointer"></i>
+                    <h3>Touch Optimized</h3>
+                    <p>Buttons and links have larger touch targets making navigation effortless on touchscreens.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-images"></i>
+                    <h3>Responsive Images</h3>
+                    <p>Images automatically resize and scale to fit any screen size without losing quality.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Mobile Cart</h3>
+                    <p>Shopping cart and checkout process optimized for mobile purchases with easy tapping.</p>
+                </div>
+            </div>
+
+            <div class="breakpoint-info">
+                <h3><i class="fas fa-ruler-horizontal"></i> Responsive Breakpoints</h3>
+                <div class="breakpoint-list">
+                    <div class="breakpoint-item">
+                        <strong>Desktop (1200px+)</strong>
+                        Full layout with multiple columns, side-by-side content
+                    </div>
+                    <div class="breakpoint-item">
+                        <strong>Tablet (768px - 1199px)</strong>
+                        Hamburger menu appears, 2-column grids, adjusted spacing
+                    </div>
+                    <div class="breakpoint-item">
+                        <strong>Mobile (480px - 767px)</strong>
+                        Single column, stacked buttons, larger tap targets
+                    </div>
+                    <div class="breakpoint-item">
+                        <strong>Small Mobile (< 480px)</strong>
+                        Optimized for smallest screens, minimal text, maximum readability
+                    </div>
+                </div>
+            </div>
+
+            <a href="magazine.html" class="btn-test" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Open Full Magazine
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        console.log('📱 Mobile Preview Loaded!');
+        console.log('✨ Resize your browser to see responsive design in action');
+    </script>
+</body>
+</html>
